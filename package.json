@@ -3,9 +3,9 @@
   "private": true,
   "description": "",
   "license": "MIT",
-  "repository": "golopot/tex-to-unicode",
+  "repository": "chiawendt/tex-to-unicode",
   "author": {
-    "name": "golopot",
+    "name": "Chiawen Chen",
     "email": "golopot@gmail.com"
   },
   "scripts": {

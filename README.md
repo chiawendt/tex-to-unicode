@@ -1,13 +1,13 @@
 ## TeX to Unicode
 
-[![Build Status](https://travis-ci.org/golopot/tex-to-unicode.svg?branch=master)](https://travis-ci.org/golopot/tex-to-unicode)
-[![codecov](https://codecov.io/gh/golopot/tex-to-unicode/branch/master/graph/badge.svg)](https://codecov.io/gh/golopot/tex-to-unicode)
+[![Build Status](https://travis-ci.org/chiawendt/tex-to-unicode.svg?branch=master)](https://travis-ci.org/chiawendt/tex-to-unicode)
+[![codecov](https://codecov.io/gh/chiawendt/tex-to-unicode/branch/master/graph/badge.svg)](https://codecov.io/gh/chiawendt/tex-to-unicode)
 
 Convert LaTeX to Unicode by pressing "Alt + W" in input and textarea.
 
 This extension helps you input mathematical Unicode symbols and Greek letters without copy-pasting.
 
-Website: https://golopot.github.io/tex-to-unicode/
+Website: https://chiawendt.github.io/tex-to-unicode/
 
 Chrome Extension: https://chrome.google.com/webstore/detail/tex-to-unicode/kdojinhjlhbmmbfogccabogomjpjijif
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.4
+
+- Change link url.
+
 ## 1.3.0 / 2019-06-13
 
 - Add iota (#9)(Quelklef)
