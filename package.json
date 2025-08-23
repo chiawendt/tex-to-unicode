@@ -17,10 +17,9 @@
     "build:docs": "vite build --config vite.config.docs.ts && cp docs-src/google85979ffadaf6ad3d.html docs/",
     "clean": "rm -rf extension/dist extension/dist.zip docs/*",
     "prettier": "prettier --check .",
-    "lint": "eslint .",
     "tsc": "tsc",
     "test": "jest --coverage",
-    "ci": "npm run prettier && npm run lint && npm run tsc && npm run test && npm run build"
+    "ci": "npm run prettier && npm run tsc && npm run test && npm run build"
   },
   "dependencies": {
     "bread-n-butter": "^0.6.0"

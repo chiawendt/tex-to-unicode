@@ -1,4 +1,0 @@
-extension/dist
-docs
-coverage
-!.eslintrc.js
