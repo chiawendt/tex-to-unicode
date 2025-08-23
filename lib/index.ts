@@ -1,7 +1,6 @@
-import symbols from "./symbols.js";
 import { findNodesBetweenNodes } from "./tree.js";
-import parser from "./parser.js";
-import type { TexNode, ASTNode } from "./parser.js";
+import { type TexNode, type ASTNode, parser } from "./parser.js";
+import { symbols } from "./symbols.js";
 
 export interface Options {
   subscripts?: boolean;
@@ -98,6 +97,7 @@ function print(
   };
 }
 
+/** convert tex to unicode text */
 export function convert(
   text: string,
   selectStart: number,
@@ -110,9 +110,7 @@ export function convert(
   return print(text, ast, selectStart, selectEnd, options);
 }
 
-/**
- * Convert TeX in textarea or "contentEditable", and then set cursor.
- */
+/** Convert TeX in textarea or contentEditable, and then set cursor. */
 export function render(element: HTMLElement, options: Options): void {
   if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
     const textarea = element as HTMLInputElement | HTMLTextAreaElement;

@@ -2,3 +2,4 @@ extension/dist
 docs/
 docs/index.html
 coverage
+.vscode

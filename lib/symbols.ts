@@ -1,4 +1,4 @@
-const symbols: Record<string, string> = {
+export const symbols: Record<string, string> = {
   "\\Alpha": "Α",
   "\\Beta": "Β",
   "\\Gamma": "Γ",
@@ -467,5 +467,3 @@ const symbols: Record<string, string> = {
   "\\natural": "♮",
   "\\sharp": "♯",
 };
-
-export default symbols;

@@ -135,7 +135,7 @@ const PlainText = bnb
   .map((x: string) => ({ value: x }))
   .thru(makeNode("PlainText"));
 
-const Program = bnb
+export const parser = bnb
   .choice(Superscript, Subscript, UnaryMacro, NullaryMacro, Illegal, PlainText)
   .repeat()
   .map((nodes: ASTNode[]) => {
@@ -144,5 +144,3 @@ const Program = bnb
     };
   })
   .thru(makeNode("Program"));
-
-export default Program;

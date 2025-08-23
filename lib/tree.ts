@@ -1,4 +1,4 @@
-// Used to find all DOM nodes in window.getSelection()
+/** Used to find all DOM nodes in window.getSelection() */
 export function findNodesBetweenNodes(u: Node, v: Node): Node[] {
   const ancestor = findLowestCommonAncestor(u, v);
   const childrenList = findChildrenList(ancestor);

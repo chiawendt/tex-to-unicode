@@ -3,8 +3,7 @@
  */
 /* eslint-env jest */
 
-import { convert, render } from "../lib/index.js";
-import parser from "../lib/parser.js";
+import { convert, parser, render } from "./index.js";
 
 const testCases = [
   {
