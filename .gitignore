@@ -3,3 +3,4 @@ coverage
 .vscode
 extension/dist/
 extension/dist.zip
+.DS_Store
