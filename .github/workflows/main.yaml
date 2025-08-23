@@ -18,6 +18,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run ci
-      - uses: codecov/codecov-action@v1
-        with:
-          fail_ci_if_error: true

@@ -28,7 +28,6 @@
     "@types/chrome": "^0.0.176",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.0.0",
-    "codecov": "^3.7.1",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
     "prettier": "^3.6.2",
