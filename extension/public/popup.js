@@ -1,7 +1,7 @@
-chrome.storage.local.get(["options"], ({ options = {} }) => {
+chrome.storage.local.get(["options"], ({ options }) => {
   Array.from(document.querySelectorAll(".options input")).map((input) => {
     if (input.name === "subscripts") {
-      input.checked = Boolean(options.subscripts);
+      input.checked = !!options?.subscripts;
     }
   });
 });
@@ -20,15 +20,12 @@ document.querySelector("body").addEventListener("click", (event) => {
 });
 
 document.querySelector(".options").addEventListener("input", () => {
-  chrome.storage.local.set({ options: getOptions() }, () => {
-    console.log(getOptions());
-  });
+  console.log(getOptions());
+  chrome.storage.local.set({ options: getOptions() });
 });
 
 function getOptions() {
-  const subscripts = document.querySelector(".options [name=subscripts]").checked;
-
   return {
-    subscripts,
+    subscripts: document.querySelector(".options [name=subscripts]").checked,
   };
 }

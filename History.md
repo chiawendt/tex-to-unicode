@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.0
+
+- Refactors
+- Change subscript option default to true
+
 ## 1.6.4
 
 - Change link url.
