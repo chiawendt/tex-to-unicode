@@ -74,7 +74,7 @@ function print(
   ast: TexNode,
   selectStart: number,
   selectEnd: number,
-  options: Options = {}
+  options: Options = {},
 ) {
   const nodes = (ast as any).body as ASTNode[];
   let cursor = -1;
@@ -102,7 +102,7 @@ export function convert(
   text: string,
   selectStart: number,
   selectEnd: number,
-  options: Options = {}
+  options: Options = {},
 ): { text: string; cursor: number } {
   selectEnd = Math.min(selectEnd, text.length);
   // The parser is not supposed to throw error by design.
@@ -155,7 +155,7 @@ export function render(element: HTMLElement, options: Options): void {
           node.nodeValue || "",
           selectionStart,
           selectionEnd,
-          options
+          options,
         );
         node.nodeValue = text;
         _cursor = cursor;

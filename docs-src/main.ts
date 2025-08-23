@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `<div class="symbol-entry">
         <span class="symbol-key">${a}</span>
         <span class="symbol-value">${b}</span>
-      </div>`
+      </div>`,
       )
       .join("\n");
   }

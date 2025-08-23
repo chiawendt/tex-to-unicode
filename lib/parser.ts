@@ -53,17 +53,19 @@ export type TexNode =
 
 function makeNode(type: string) {
   return function makeNodeWrapper(parser: any) {
-    return bnb
-      .all(bnb.location, parser, bnb.location)
-      .map(function makeNode_([start, value, end]: [any, any, any]) {
-        return {
-          type,
-          start: start.index,
-          end: end.index,
-          // @ts-ignore
-          ...value,
-        };
-      });
+    return bnb.all(bnb.location, parser, bnb.location).map(function makeNode_([start, value, end]: [
+      any,
+      any,
+      any,
+    ]) {
+      return {
+        type,
+        start: start.index,
+        end: end.index,
+        // @ts-ignore
+        ...value,
+      };
+    });
   };
 }
 
@@ -105,7 +107,7 @@ const UnaryMacro = bnb
       bnb.match(/\\mathbb(?![a-zA-Z])/),
       bnb.match(/\\mathfrak(?![a-zA-Z])/),
       bnb.match(/\\mathcal(?![a-zA-Z])/),
-      bnb.match(/\\not(?![a-zA-Z])/)
+      bnb.match(/\\not(?![a-zA-Z])/),
     ),
     Spaces,
     bnb.choice(
@@ -114,8 +116,8 @@ const UnaryMacro = bnb
       bnb
         .match(/[a-zA-Z0-9]/)
         .map((x) => ({ value: x }))
-        .thru(makeNode("PlainText"))
-    )
+        .thru(makeNode("PlainText")),
+    ),
   )
   .map(([a, _, c]: [string, any, ASTNode]) => ({
     macro: a,

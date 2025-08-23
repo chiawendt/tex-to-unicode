@@ -36,7 +36,9 @@ kbd {
   background-color: hsl(210, 8%, 90%);
   border: 1px solid hsl(210, 8%, 65%);
   border-radius: 3px;
-  box-shadow: 0 1px 1px hsl(210deg 8% 5% / 15%), inset 0 1px 0 0 hsl(0deg 0% 100%);
+  box-shadow:
+    0 1px 1px hsl(210deg 8% 5% / 15%),
+    inset 0 1px 0 0 hsl(0deg 0% 100%);
   overflow-wrap: break-word;
 }
 
