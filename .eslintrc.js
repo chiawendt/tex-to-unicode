@@ -1,7 +1,7 @@
 module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: 'module',
+    sourceType: "module",
   },
   env: {
     browser: true,
@@ -10,20 +10,20 @@ module.exports = {
     node: true,
     webextensions: true,
   },
-  extends: ['eslint:recommended'],
+  extends: ["eslint:recommended"],
   rules: {
     eqeqeq: 2,
-    'no-unused-vars': [
+    "no-unused-vars": [
       2,
       {
-        argsIgnorePattern: '^_+$',
+        argsIgnorePattern: "^_+$",
       },
     ],
-    'no-cond-assign': 0,
-    'no-console': 0,
-    'no-unused-expressions': 2,
-    'prefer-template': 2,
-    'prefer-const': 2,
-    'prefer-destructuring': 2,
+    "no-cond-assign": 0,
+    "no-console": 0,
+    "no-unused-expressions": 2,
+    "prefer-template": 2,
+    "prefer-const": 2,
+    "prefer-destructuring": 2,
   },
 };

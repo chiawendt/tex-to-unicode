@@ -1,5 +1,5 @@
 node_modules
-extension/dist
-extension/dist.zip
 coverage
 .vscode
+extension/dist/
+extension/dist.zip

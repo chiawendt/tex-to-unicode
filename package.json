@@ -1,5 +1,6 @@
 {
   "name": "tex-to-unicode",
+  "type": "module",
   "private": true,
   "description": "",
   "license": "MIT",
@@ -9,31 +10,53 @@
     "email": "golopot@gmail.com"
   },
   "scripts": {
-    "dev": "cd extension && webpack -w",
-    "pack-extension": "cd extension && webpack && cd dist && zip -rFS ../dist.zip *",
-    "pack-docs": "webpack -c build/webpack.configs.docs.js",
+    "dev": "vite build --config vite.config.extension.ts --watch",
+    "dev:docs": "vite --config vite.config.docs.ts",
+    "build": "npm run clean && npm run build:extension && npm run build:docs",
+    "build:extension": "vite build --config vite.config.extension.ts && cd extension/dist && zip -rFS ../dist.zip *",
+    "build:docs": "vite build --config vite.config.docs.ts && cp docs-src/google85979ffadaf6ad3d.html docs/",
+    "clean": "rm -rf extension/dist extension/dist.zip docs/*",
     "prettier": "prettier --check .",
     "lint": "eslint .",
     "tsc": "tsc",
     "test": "jest --coverage",
-    "ci": "npm run prettier && npm run lint && npm run tsc && npm run test"
+    "ci": "npm run prettier && npm run lint && npm run tsc && npm run test && npm run build"
   },
   "dependencies": {
     "bread-n-butter": "^0.6.0"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.176",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
     "codecov": "^3.7.1",
-    "copy-webpack-plugin": "^10.2.0",
     "eslint": "^8.6.0",
-    "jest": "^27.5.1",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
     "prettier": "^2.6.2",
-    "typescript": "^4.5.4",
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-prettier-plugin": "^1.0.3"
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
   },
   "engines": {
-    "node": ">=14.5.0"
+    "node": ">=24.6.0"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "testEnvironment": "jsdom",
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "useESM": true
+        }
+      ]
+    }
   }
 }
